@@ -3,7 +3,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const assert=require('node:assert/strict');
 const project=path.resolve(__dirname,'..');
-const files=['photos.js','lessons.js','clinical-bank.js','engine-base.js','experience.js','motion-experience.js'];
+const files=['photos.js','lessons.js','clinical-bank.js','engine-base.js','experience.js','studio-experience.js'];
 const memory=new Map();
 function boot({blocked=false}={}){
  const nodes=new Map();
