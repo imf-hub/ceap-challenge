@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#a72037">
+<meta name="description" content="Entrena la clasificación CEAP 2020 con fotografías clínicas reales, niveles y casos por capas. Instituto Mexicano de Flebología.">
+<meta property="og:title" content="CEAP Challenge · Instituto Mexicano de Flebología">
+<meta property="og:description" content="Observa, compara y resuelve. Entrenamiento CEAP 2020 para médicos con fotografías clínicas y fuentes documentadas.">
+<meta property="og:type" content="website">
+<title>CEAP Challenge · Instituto Mexicano de Flebología</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="clinical.css">
+<script src="photos.js" defer></script>
+<script src="lessons.js" defer></script>
+<script src="clinical-bank.js" defer></script>
+<script src="engine-base.js" defer></script>
+<script src="experience.js" defer></script>
+</head>
+<body>
+<div class="shell">
+ <header class="topbar">
+  <button class="brand" data-action="navigate" data-view="home" aria-label="CEAP Challenge, inicio"><span class="brand-symbol">IMF</span><span><span class="brand-name">CEAP<span>challenge</span></span><small>ENTRENA TU OJO CLÍNICO</small></span></button>
+  <nav class="nav" aria-label="Navegación principal"><button data-action="navigate" data-view="home">Jugar</button><button data-action="navigate" data-view="route">La ruta</button><button data-action="navigate" data-view="progress">Mi avance</button><button data-action="navigate" data-view="guide">Guía CEAP</button></nav>
+  <span class="header-pill">CEAP 2020 · Entrenamiento clínico</span>
+ </header>
+ <main class="main" id="main" tabindex="-1"></main>
+ <footer class="footer"><div><strong>Instituto Mexicano de Flebología · CEAP Challenge</strong><br>Práctica educativa con fuentes documentadas. El avance del juego no acredita competencia clínica.</div><span>Fotografías reales · Casos por capas · Tu avance se guarda aquí</span></footer>
+</div>
+<div class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></div>
+<dialog class="exit-dialog" id="exit-dialog"><h2>¿Salir de la ronda?</h2><p>Esta ronda aún no se ha guardado. Tu avance de rondas anteriores se conserva.</p><div class="hero-actions"><button class="btn primary" data-action="keep-playing">Seguir jugando</button><button class="btn" data-action="confirm-exit">Salir de la ronda</button></div></dialog>
+<noscript><p style="padding:30px">Activa JavaScript en tu navegador para jugar este prototipo.</p></noscript>
+
+</body>
+</html>
