@@ -3,7 +3,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const assert=require('node:assert/strict');
 const project=path.resolve(__dirname,'..');
-const files=['photos.js','lessons.js','clinical-bank.js','engine-base.js','experience.js'];
+const files=['photos.js','lessons.js','clinical-bank.js','engine-base.js','experience.js','motion-experience.js'];
 const memory=new Map();
 function boot({blocked=false}={}){
  const nodes=new Map();
@@ -14,6 +14,14 @@ function boot({blocked=false}={}){
 }
 const ctx=boot();
 vm.runInContext(`
+ state.view='home';render();
+ if(!main.innerHTML.includes('data-hub-deck'))throw Error('Missing practice deck');
+ setHubMode(1);if(!main.innerHTML.includes('Práctica a tu medida'))throw Error('Mode selection failed');
+ setHubMode(2);if(!main.innerHTML.includes('El reto del día'))throw Error('Daily mode failed');
+ setHubMode(3);if(state.hubMode!==0)throw Error('Deck wrap failed');
+ state.view='route';state.routeGroup='integrate';render();
+ if((main.innerHTML.match(/data-action="start-chapter"/g)||[]).length!==3)throw Error('Chapter filter failed');
+ state.routeGroup='all';
  if(PHOTO_BANK.length!==62||registryPhotos.length!==57)throw Error('Unexpected media count');
  const files=new Set();for(const photo of PHOTO_BANK){if(files.has(photo.file))throw Error('Duplicate file');files.add(photo.file);if(!photo.sourceUrl||!photo.licenseUrl||!photo.changes)throw Error('Missing attribution');}
  for(const [id,c] of Object.entries(CASES)){

@@ -53,6 +53,14 @@ Los puntos, porcentajes y capítulos explorados son datos de práctica; no acred
 
 La rama `main`, carpeta raíz, es la fuente de publicación de GitHub Pages. Al actualizar archivos, cambiar la versión de caché de `sw.js` para que se distribuyan las nuevas copias.
 
+## Diseño de la experiencia
+
+La selección de rondas toma como referencia **Bite-Sized Courses**, de Motion Sites, consultada mediante el acceso autorizado del usuario en Imperio Agéntico. Se adaptaron la tarjeta protagonista, su pila de tarjetas, los controles de cambio y la navegación móvil a la web clínica existente. Fitness Dashboard y LearnHub se revisaron como referencias secundarias de progreso y organización.
+
+La adaptación utiliza composición responsive, texto real del juego y datos locales de práctica. No incorpora maquetas de teléfonos, métricas ficticias, avatares de ejemplo ni vídeos decorativos. Las fotografías clínicas se mantienen completas y sin filtros. Hay botones y teclado además del gesto horizontal, y se respeta la preferencia de reducción de movimiento.
+
+Los prompts completos de la biblioteca licenciada no se redistribuyen con este repositorio. El banco clínico, las respuestas y las etiquetas originales no se modificaron como parte de este ajuste de UX/UI.
+
 ## Licencias
 
 El código del proyecto se distribuye bajo MIT, con las exclusiones de `LICENSE`. Las fotografías y figuras **no** se relicencian bajo MIT: conservan las licencias y atribuciones de sus respectivas fuentes. Las referencias médicas se citan, sin reproducir sus artículos completos.
